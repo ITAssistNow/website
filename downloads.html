@@ -1,0 +1,48 @@
+/* Downloads Page Specific Styles */
+.support-notice {
+    background-color: var(--light);
+    padding: 20px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-top: 40px;
+}
+
+.support-notice i {
+    font-size: 24px;
+    color: var(--secondary);
+}
+
+.support-notice a {
+    color: var(--secondary);
+    font-weight: 600;
+}
+
+.app-badges {
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.app-badge {
+    display: inline-block;
+    height: 40px;
+}
+
+.app-badge img {
+    height: 100%;
+    width: auto;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .download-items {
+        grid-template-columns: 1fr;
+    }
+    
+    .support-notice {
+        flex-direction: column;
+        text-align: center;
+    }
+}

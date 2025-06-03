@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ITAssistNow | Our Services</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        /* Specific styles for the Services page to enhance layout */
+        .services-hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('images/services-banner.jpg') no-repeat center center/cover;
+            color: #fff;
+            text-align: center;
+            padding: 100px 20px;
+            margin-bottom: 50px;
+        }
+
+        .services-hero h1 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 3.5em;
+            margin-bottom: 15px;
+        }
+
+        .services-hero p {
+            font-family: 'Open Sans', sans-serif;
+            font-size: 1.2em;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .services-full-list {
+            padding: 50px 0;
+        }
+
+        .services-full-list h2 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 2.5em;
+            text-align: center;
+            color: #333;
+            margin-bottom: 40px;
+        }
+
+        .service-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 60px;
+            gap: 40px;
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+        }
+
+        .service-item:nth-child(even) {
+            flex-direction: row-reverse; /* Alternate image and text for visual interest */
+        }
+
+        .service-item .icon-box {
+            flex-shrink: 0;
+            width: 80px;
+            height: 80px;
+            background-color: #007bff; /* Primary blue */
+            color: #fff;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 2.5em;
+        }
+
+        .service-item .service-content {
+            flex-grow: 1;
+        }
+
+        .service-item .service-content h3 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 2em;
+            color: #333;
+            margin-bottom: 15px;
+        }
+
+        .service-item .service-content p {
+            font-family: 'Open Sans', sans-serif;
+            color: #666;
+            line-height: 1.7;
+            margin-bottom: 15px;
+        }
+
+        .service-item .service-content ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .service-item .service-content ul li {
+            font-family: 'Open Sans', sans-serif;
+            color: #666;
+            margin-bottom: 8px;
+            position: relative;
+            padding-left: 25px;
+        }
+
+        .service-item .service-content ul li:before {
+            content: "\f00c"; /* Font Awesome check icon */
+            font-family: "Font Awesome 5 Free";
+            font-weight: 900;
+            color: #28a745; /* Green check */
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+
+        @media (max-width: 768px) {
+            .services-hero h1 {
+                font-size: 2.5em;
+            }
+            .services-hero p {
+                font-size: 1em;
+            }
+            .service-item,
+            .service-item:nth-child(even) {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+            .service-item .icon-box {
+                margin-bottom: 20px;
+            }
+            .service-item .service-content ul {
+                text-align: left; /* Keep bullet points aligned left even if text is centered */
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="logo">ITAssist<span>Now</span></a>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="services.html" class="active">Services</a>
+                <a href="about.html">About</a>
+                <a href="contact.html" class="btn">Contact Us</a>
+            </div>
+            <button class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <section class="services-hero">
+        <div class="container">
+            <h1>Comprehensive IT Solutions for Your Success</h1>
+            <p>From day-to-day troubleshooting to complex network architecture, we provide a full spectrum of IT services tailored to your unique needs.</p>
+        </div>
+    </section>
+
+    <section class="services-full-list">
+        <div class="container">
+            <h2>Our Core Services</h2>
+
+            <div class="service-item">
+                <div class="icon-box"><i class="fas fa-headset"></i></div>
+                <div class="service-content">
+                    <h3>Remote & On-Site IT Support</h3>
+                    <p>Get instant assistance for your technical issues without delay. Our certified technicians can connect to your systems remotely or provide on-site support when necessary.</p>
+                    <ul>
+                        <li><i class="fas fa-check-circle"></i> Desktop & Laptop Troubleshooting</li>
+                        <li><i class="fas fa-check-circle"></i> Software Installation & Configuration</li>
+                        <li><i class="fas fa-check-circle"></i> Printer & Peripheral Setup</li>
+                        <li><i class="fas fa-check-circle"></i> Virus & Malware Removal</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="service-item">
+                <div class="icon-box"><i class="fas fa-server"></i></div>
+                <div class="service-content">
+                    <h3>Network Design & Management</h3>
+                    <p>Build a robust and secure network infrastructure that powers your business. We handle everything from initial setup to ongoing maintenance and optimization.</p>
+                    <ul>
+                        <li><i class="fas fa-check-circle"></i> Wired & Wireless Network Setup</li>
+                        <li><i class="fas fa-check-circle"></i> Router & Firewall Configuration</li>
+                        <li><i class="fas fa-check-circle"></i> Network Security Audits</li>
+                        <li><i class="fas fa-check-circle"></i> VPN Solutions for Remote Access</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="service-item">
+                <div class="icon-box"><i class="fas fa-cloud"></i></div>
+                <div class="service-content">
+                    <h3>Cloud Solutions & Data Management</h3>
+                    <p>Leverage the power of the cloud for enhanced flexibility, scalability, and data security. We assist with cloud migration, backup strategies, and data recovery.</p>
+                    <ul>
+                        <li><i class="fas fa-check-circle"></i> Cloud Migration & Integration (Microsoft 365, Google Workspace)</li>
+                        <li><i class="fas fa-check-circle"></i> Cloud Storage & Backup Solutions</li>
+                        <li><i class="fas fa-check-circle"></i> Data Recovery & Disaster Planning</li>
+                        <li><i class="fas fa-check-circle"></i> Server Virtualization</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="service-item">
+                <div class="icon-box"><i class="fas fa-lock"></i></div>
+                <div class="service-content">
+                    <h3>Cybersecurity & Data Protection</h3>
+                    <p>Protect your valuable data and systems from evolving cyber threats. Our comprehensive security measures ensure your peace of mind.</p>
+                    <ul>
+                        <li><i class="fas fa-check-circle"></i> Antivirus & Endpoint Protection</li>
+                        <li><i class="fas fa-check-circle"></i> Firewall & Intrusion Detection</li>
+                        <li><i class="fas fa-check-circle"></i> Employee Security Training</li>
+                        <li><i class="fas fa-check-circle"></i> Compliance Consulting (GDPR, ISO 27001)</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="service-item">
+                <div class="icon-box"><i class="fas fa-chart-line"></i></div>
+                <div class="service-content">
+                    <h3>IT Consulting & Strategy</h3>
+                    <p>Gain a competitive edge with strategic IT guidance. We help you make informed decisions to optimize your technology investments and achieve business goals.</p>
+                    <ul>
+                        <li><i class="fas fa-check-circle"></i> IT Infrastructure Planning</li>
+                        <li><i class="fas fa-check-circle"></i> Technology Roadmapping</li>
+                        <li><i class="fas fa-check-circle"></i> Vendor Management</li>
+                        <li><i class="fas fa-check-circle"></i> Budgeting & Cost Optimization</li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="cta">
+        <div class="container">
+            <h2>Ready to Enhance Your IT Infrastructure?</h2>
+            <p>Contact us today for a free consultation and discover how we can help your business thrive.</p>
+            <a href="contact.html" class="btn primary">Schedule a Consultation</a>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-about">
+                    <a href="index.html" class="logo">ITAssist<span>Now</span></a>
+                    <p>Providing expert IT assistance to businesses and individuals since 2015.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h3>Services</h3>
+                    <ul>
+                        <li><a href="services.html">Remote Support</a></li>
+                        <li><a href="services.html">Network Solutions</a></li>
+                        <li><a href="services.html">Security</a></li>
+                        <li><a href="services.html">Data Recovery</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h3>Contact</h3>
+                    <ul>
+                        <li><i class="fas fa-envelope"></i> support@itassistnow.com</li>
+                        <li><i class="fas fa-map-marker-alt"></i> 71-75 Shelton Street, Covent Garden, London, United Kingdom, WC2H 9JQ</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 ITAssistNow. All rights reserved.</p>
+                <div class="legal-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
