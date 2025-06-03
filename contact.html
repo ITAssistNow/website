@@ -3,10 +3,212 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us | ITAssistNow</title>
+    <title>ITAssistNow | Contact Us</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="css/style.css">
+    <style>
+        /* Specific styling for the contact page */
+        .contact-hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('images/contact-banner.jpg') no-repeat center center/cover; /* Placeholder image */
+            color: #fff;
+            text-align: center;
+            padding: 100px 20px;
+            margin-bottom: 50px;
+        }
+
+        .contact-hero h1 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 3.5em;
+            margin-bottom: 15px;
+        }
+
+        .contact-hero p {
+            font-family: 'Open Sans', sans-serif;
+            font-size: 1.2em;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .contact-section {
+            padding: 50px 0;
+            background-color: #f9f9f9;
+        }
+
+        .contact-content {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 40px;
+            max-width: 1000px; /* Aligns with container width */
+            margin: 0 auto;
+            align-items: flex-start;
+        }
+
+        .contact-info,
+        .contact-form-container {
+            flex: 1; /* Allows columns to grow/shrink */
+            min-width: 320px; /* Minimum width before wrapping */
+        }
+
+        .contact-info h2,
+        .contact-form-container h2 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 2.2em;
+            color: #333;
+            margin-bottom: 25px;
+        }
+
+        .contact-info p {
+            font-family: 'Open Sans', sans-serif;
+            color: #666;
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+
+        .contact-info ul {
+            list-style: none;
+            padding: 0;
+            margin-top: 20px;
+        }
+
+        .contact-info ul li {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+            color: #666;
+            font-family: 'Open Sans', sans-serif;
+            font-size: 1.1em;
+        }
+
+        .contact-info ul li i {
+            color: #007bff; /* Primary blue color */
+            margin-right: 15px;
+            font-size: 1.5em;
+            width: 30px; /* Fixed width for icons */
+            text-align: center;
+        }
+
+        .contact-info ul li a {
+            color: #007bff;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .contact-info ul li a:hover {
+            color: #0056b3;
+            text-decoration: underline;
+        }
+
+        .contact-form {
+            background-color: #fff;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+        }
+
+        .contact-form label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: 600;
+            color: #333;
+            font-family: 'Open Sans', sans-serif;
+        }
+
+        .contact-form input[type="text"],
+        .contact-form input[type="email"],
+        .contact-form input[type="tel"],
+        .contact-form textarea {
+            width: 100%;
+            padding: 14px;
+            margin-bottom: 25px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-family: 'Open Sans', sans-serif;
+            font-size: 1em;
+            box-sizing: border-box; /* Include padding and border in the element's total width and height */
+            transition: border-color 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .contact-form input[type="text"]:focus,
+        .contact-form input[type="email"]:focus,
+        .contact-form input[type="tel"]:focus,
+        .contact-form textarea:focus {
+            border-color: #007bff;
+            box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.25);
+            outline: none;
+        }
+
+        .contact-form textarea {
+            resize: vertical;
+            min-height: 140px;
+        }
+
+        .contact-form button.btn {
+            background-color: #007bff; /* Primary blue color */
+            color: #fff;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1.15em;
+            font-weight: 700;
+            font-family: 'Poppins', sans-serif;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+
+        .contact-form button.btn:hover {
+            background-color: #0056b3; /* Darker blue on hover */
+            transform: translateY(-2px);
+        }
+
+        .social-links-contact {
+            margin-top: 30px;
+            display: flex;
+            gap: 15px;
+        }
+
+        .social-links-contact a {
+            color: #333;
+            font-size: 1.8em;
+            transition: color 0.3s ease;
+        }
+
+        .social-links-contact a:hover {
+            color: #007bff;
+        }
+
+
+        @media (max-width: 768px) {
+            .contact-hero h1 {
+                font-size: 2.5em;
+            }
+            .contact-hero p {
+                font-size: 1em;
+            }
+            .contact-content {
+                flex-direction: column;
+                align-items: center;
+                gap: 30px;
+            }
+            .contact-info,
+            .contact-form-container {
+                width: 100%;
+                min-width: unset; /* Remove min-width on small screens */
+            }
+            .contact-info {
+                text-align: center;
+            }
+            .contact-info ul {
+                text-align: left; /* Keep bullet points aligned left even if text is centered */
+                margin-left: auto;
+                margin-right: auto;
+                max-width: fit-content;
+            }
+            .social-links-contact {
+                justify-content: center;
+            }
+        }
+    </style>
 </head>
 <body>
     <nav class="navbar">
@@ -26,52 +228,63 @@
         </div>
     </nav>
 
-    <section class="hero-small">
+    <section class="contact-hero">
         <div class="container">
             <h1>Get in Touch with ITAssistNow</h1>
-            <p>We're here to help! Fill out the form below or reach us directly.</p>
+            <p>We're here to help with all your IT needs. Reach out to our team for quick, reliable support and solutions.</p>
         </div>
     </section>
 
-    <section class="contact-form-section">
-        <div class="container">
-            <div class="contact-grid">
-                <div class="contact-info">
-                    <h2>Contact Information</h2>
-                    <p>Have questions or need immediate assistance? Reach out to us through the following channels:</p>
-                    <ul>
-                        <li><i class="fas fa-envelope"></i> Email: <a href="mailto:sales@itassistnow.org">sales@itassistnow.org</a></li>
-                        <li><i class="fas fa-map-marker-alt"></i> Address: 71-75 Shelton Street, Covent Garden, London, United Kingdom, WC2H 9JQ</li>
+    <section class="contact-section">
+        <div class="container contact-content">
+            <div class="contact-info">
+                <h2>Contact Information</h2>
+                <p>Have questions, need support, or want to discuss a project? We're available through multiple channels.</p>
+                <ul>
+                    <li>
+                        <i class="fas fa-envelope"></i>
+                        <span>Email: <a href="mailto:sales@itassistnow.org">sales@itassistnow.org</a></span>
+                    </li>
+                    <li>
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>Address: 71-75 Shelton Street, Covent Garden, London, United Kingdom, WC2H 9JQ</span>
+                    </li>
                     </ul>
-                    <div class="social-links">
-                        <a href="#"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                    </div>
-                </div>
-                <div class="contact-form-container">
-                    <h2>Send Us a Message</h2>
-                    <form action="mailto:sales@itassistnow.org" method="post" enctype="text/plain" class="contact-form">
-                        <div class="form-group">
-                            <label for="name">Your Name</label>
-                            <input type="text" id="name" name="name" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="email">Your Email</label>
-                            <input type="email" id="email" name="email" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="subject">Subject</label>
-                            <input type="text" id="subject" name="subject" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="message">Your Message</label>
-                            <textarea id="message" name="message" rows="6" required></textarea>
-                        </div>
-                        <button type="submit" class="btn primary">Send Message</button>
-                    </form>
+                <div class="social-links-contact">
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
                 </div>
             </div>
+            <div class="contact-form-container">
+                <h2>Send Us a Message</h2>
+                <form action="send_email.php" method="POST" class="contact-form">
+                    <label for="name">Your Name:</label>
+                    <input type="text" id="name" name="name" placeholder="John Doe" required>
+
+                    <label for="email">Your Email:</label>
+                    <input type="email" id="email" name="email" placeholder="john.doe@example.com" required>
+
+                    <label for="phone">Phone Number (Optional):</label>
+                    <input type="tel" id="phone" name="phone" placeholder="+44 7XXX XXXXXX">
+
+                    <label for="subject">Subject:</label>
+                    <input type="text" id="subject" name="subject" placeholder="Inquiry about IT Services" required>
+
+                    <label for="message">Your Message:</label>
+                    <textarea id="message" name="message" placeholder="Type your message here..." required></textarea>
+
+                    <button type="submit" class="btn primary">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta">
+        <div class="container">
+            <h2>Need Immediate Assistance?</h2>
+            <p>Our expert team is available 24/7 for urgent IT support.</p>
+            <a href="contact.html" class="btn primary">Get Help Now</a>
         </div>
     </section>
 
@@ -105,10 +318,10 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2015 ITAssistNow. All rights reserved.</p>
+                <p>&copy; 2023 ITAssistNow. All rights reserved.</p>
                 <div class="legal-links">
-                    <a href="privacy-policy.html">Privacy Policy</a>
-                    <a href="terms-of-service.html">Terms of Service</a>
+                    <a href="privacy.html">Privacy Policy</a>
+                    <a href="terms.html">Terms of Service</a>
                 </div>
             </div>
         </div>
