@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', function() {
         {
             quote: "ITAssistNow resolved our server issue in under an hour when no one else could. Lifesavers!",
             name: "Sarah Johnson",
-            title: "CEO, TechForward Inc.",
+            title: "MD, NHS.",
             image: "images/client1.jpg"
         },
         {
@@ -33,7 +33,7 @@ document.addEventListener('DOMContentLoaded', function() {
         {
             quote: "Professional, knowledgeable, and always available when we need them. Five stars!",
             name: "Emily Rodriguez",
-            title: "IT Manager, Bright Media",
+            title: "IT Manager, Business Enquirer",
             image: "images/client3.jpg"
         }
     ];
